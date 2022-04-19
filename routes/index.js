@@ -3,5 +3,8 @@ const manipulator=require('./manipulation');
 const router=express.Router();
 const homeController=require('../controllers/homeController');
 router.get('/',homeController.display);
+router.post('/user-profile',homeController.login);
+router.get('/user-profile',homeController.check_validiity);
+router.get('/sign-out',homeController.endSession);
 router.use('/sign-up',manipulator);
 module.exports=router;

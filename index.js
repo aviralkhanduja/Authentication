@@ -1,10 +1,11 @@
+const cookieParser = require('cookie-parser');
 const express=require('express');
 const app=express();
 app.use(express.urlencoded());
 const expressLayouts = require('express-ejs-layouts');
 
 app.use(express.static('./assets'));
-
+app.use(cookieParser());
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
 app.set('layout extractStyles', true);
