@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/sign_up.css">
+<main>  
+    <h2>PERSONAL INFO</h2>
+    <form action="/sign-up/add-user" id="take-input" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="First_Name">FIRST NAME</label>
+                <input type="text" name="First_Name" required>
+            </div>
+            <div class="col">
+                <label for="Last_Name">LAST NAME</label>
+                <input type="text" name="Last_Name" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Email">EMAIL</label>
+                <input type="email" name="Email" required>
+            </div>
+            <div class="col">
+                <label for="Phone">PHONE NUMBER</label>
+                <input type="text" name="Phone" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Address">ADDRESS</label>
+                <input type="text" name="Address" required>
+            </div>
+            <div class="col">
+                <label for="Zip_Code">ZIP CODE</label>
+                <input type="text" name="Zip_Code" required>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col">
+                <label for="Password">Password</label>
+                <input type="text" name="Password" required>
+            </div>
+            <div class="col">
+                <label for="Confirm_Password">Confirm Password</label>
+                <input type="text" name="Confirm_Password" required>
+            </div>
+        </div>
+        <button type="submit"><i class="fas fa-user"></i>ADD USER</button>
+    </form>
+</main>

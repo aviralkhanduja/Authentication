@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "Aviral",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.3.0"
   }
 }
