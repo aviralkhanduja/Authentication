@@ -5,7 +5,7 @@ exports.display=function(req,res){
 exports.createEntry=function(req,res){
 
     console.log(req.body);
-    if(req.body.Password!=req.body.Confirm_Password)
+    if(req.body.password!=req.body.Confirm_Password)
     {
         console.log('Unmatched Passwords**********');
         return res.redirect('/sign-up');

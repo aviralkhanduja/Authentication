@@ -3,11 +3,12 @@ const manipulator=require('./manipulation');
 const passport=require('passport');
 const router=express.Router();
 const homeController=require('../controllers/homeController');
-router.get('/',homeController.display);
-router.use('/sign-up',manipulator);
+router.get('/',passport.restrictAccess,homeController.display);
+router.get('/user-profile',passport.checkAuthentication,homeController.displayUserSpecific);
+router.use('/sign-up',passport.restrictAccess,manipulator);
 router.post('/create-session', passport.authenticate(
     'local',
-    {failureRedirect: '/'},
+    {failureMessage: true,failureRedirect: '/'},
 ), homeController.createSession);
-
+router.get('/sign-out',homeController.destroySession);
 module.exports = router;
